@@ -2,10 +2,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:whatsapp_ui/common/utils/utils.dart';
-import 'package:whatsapp_ui/features/call/screens/call_screen.dart';
-import 'package:whatsapp_ui/models/call.dart';
-import 'package:whatsapp_ui/models/group.dart' as model;
+import 'package:vidchat/common/utils/utils.dart';
+import 'package:vidchat/features/call/screens/call_screen.dart';
+import 'package:vidchat/models/call.dart';
+import 'package:vidchat/models/group.dart' as model;
 
 final callRepositoryProvider = Provider(
   (ref) => CallRepository(
@@ -21,7 +21,10 @@ class CallRepository {
     required this.firestore,
     required this.auth,
   });
-
+//Defines various methods for making calls, making group calls, ending calls,
+// and ending group calls. These methods interact with the Firebase Cloud
+// Firestore database to perform CRUD operations related to calls, such as
+// adding call data, updating call data, and deleting call data
   Stream<DocumentSnapshot> get callStream =>
       firestore.collection('call').doc(auth.currentUser!.uid).snapshots();
 
@@ -39,7 +42,9 @@ class CallRepository {
           .collection('call')
           .doc(senderCallData.receiverId)
           .set(receiverCallData.toMap());
-
+//navigate to a CallScreen widget with appropriate parameters such as the call
+// data, channel ID, and whether it's a group chat or not, when making calls or
+// group calls.
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -125,3 +130,6 @@ class CallRepository {
     }
   }
 }
+/*
+responsible for handling CRUD (Create, Read, Update, Delete) operations related to calls
+ */

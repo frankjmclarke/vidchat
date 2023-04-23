@@ -21,3 +21,9 @@ class CommonFirebaseStorageRepository {
     return downloadUrl;
   }
 }
+/*
+Overall, this code sets up a CommonFirebaseStorageRepository class and a
+Riverpod provider for managing interactions with Firebase Storage in a Flutter
+app. The storeFileToFirebase method can be used to upload a file to Firebase
+Storage and retrieve the download URL for further use in the app.
+ */

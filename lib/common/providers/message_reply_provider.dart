@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:whatsapp_ui/common/enums/message_enum.dart';
+import 'package:vidchat/common/enums/message_enum.dart';
 
 class MessageReply {
   final String message;
@@ -10,3 +10,8 @@ class MessageReply {
 }
 
 final messageReplyProvider = StateProvider<MessageReply?>((ref) => null);
+/*
+ defines a data model (MessageReply) and a state provider (messageReplyProvider)
+ that can be used in a Flutter application for managing and accessing the state
+ of MessageReply objects across different parts of the app
+ */

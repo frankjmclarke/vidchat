@@ -5,12 +5,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_sound/public/flutter_sound_recorder.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:whatsapp_ui/common/utils/colors.dart';
-import 'package:whatsapp_ui/common/enums/message_enum.dart';
-import 'package:whatsapp_ui/common/providers/message_reply_provider.dart';
-import 'package:whatsapp_ui/common/utils/utils.dart';
-import 'package:whatsapp_ui/features/chat/controller/chat_controller.dart';
-import 'package:whatsapp_ui/features/chat/widgets/message_reply_preview.dart';
+import 'package:vidchat/common/utils/colors.dart';
+import 'package:vidchat/common/enums/message_enum.dart';
+import 'package:vidchat/common/providers/message_reply_provider.dart';
+import 'package:vidchat/common/utils/utils.dart';
+import 'package:vidchat/features/chat/controller/chat_controller.dart';
+import 'package:vidchat/features/chat/widgets/message_reply_preview.dart';
 
 class BottomChatField extends ConsumerStatefulWidget {
   final String recieverUserId;

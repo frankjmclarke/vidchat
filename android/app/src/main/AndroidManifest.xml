@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.whatsapp_ui">
+    package="com.fclarke.vidchat">
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -13,7 +13,7 @@
     <!-- The Agora SDK requires Bluetooth permissions in case users are using Bluetooth devices.-->
     <uses-permission  android:name="android.permission.BLUETOOTH"  />
    <application
-        android:label="whatsapp_ui"
+        android:label="vidchat"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

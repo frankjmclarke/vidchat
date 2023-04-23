@@ -4,12 +4,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:whatsapp_ui/common/repositories/common_firebase_storage_repository.dart';
-import 'package:whatsapp_ui/common/utils/utils.dart';
-import 'package:whatsapp_ui/features/auth/screens/otp_screen.dart';
-import 'package:whatsapp_ui/features/auth/screens/user_information_screen.dart';
-import 'package:whatsapp_ui/models/user_model.dart';
-import 'package:whatsapp_ui/mobile_layout_screen.dart';
+import 'package:vidchat/common/repositories/common_firebase_storage_repository.dart';
+import 'package:vidchat/common/utils/utils.dart';
+import 'package:vidchat/features/auth/screens/otp_screen.dart';
+import 'package:vidchat/features/auth/screens/user_information_screen.dart';
+import 'package:vidchat/models/user_model.dart';
+import 'package:vidchat/mobile_layout_screen.dart';
 
 final authRepositoryProvider = Provider(
   (ref) => AuthRepository(
@@ -38,6 +38,11 @@ class AuthRepository {
   }
 
   void signInWithPhone(BuildContext context, String phoneNumber) async {
+    /*
+     Initiates phone number verification process using Firebase Authentication's
+      verifyPhoneNumber() method. It sends a verification code to the provided
+      phone number and navigates to the OTPScreen when the code is sent.
+     */
     try {
       await auth.verifyPhoneNumber(
         phoneNumber: phoneNumber,
@@ -66,6 +71,9 @@ class AuthRepository {
     required String verificationId,
     required String userOTP,
   }) async {
+    //Verifies the OTP entered by the user using PhoneAuthProvider.credential()
+    // method, and signs in the user with the verified credential. It also
+    // navigates to the UserInformationScreen upon successful verification.
     try {
       PhoneAuthCredential credential = PhoneAuthProvider.credential(
         verificationId: verificationId,
@@ -88,6 +96,11 @@ class AuthRepository {
     required ProviderRef ref,
     required BuildContext context,
   }) async {
+    //Saves user data to Firestore including name, profile picture, online
+    // status, phone number, and group ID. It uses the
+    // commonFirebaseStorageRepositoryProvider to store the profile picture to
+    // Firebase Storage, and navigates to the MobileLayoutScreen upon successful
+    // data saving.
     try {
       String uid = auth.currentUser!.uid;
       String photoUrl =
@@ -139,3 +152,8 @@ class AuthRepository {
     });
   }
 }
+/*
+this code provides a way to handle phone number authentication, user data
+saving, and user data retrieval in a Flutter app using Firebase Authentication
+and Firestore.
+ */

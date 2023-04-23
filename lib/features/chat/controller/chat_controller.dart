@@ -2,13 +2,13 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:whatsapp_ui/common/enums/message_enum.dart';
-import 'package:whatsapp_ui/common/providers/message_reply_provider.dart';
-import 'package:whatsapp_ui/features/auth/controller/auth_controller.dart';
-import 'package:whatsapp_ui/features/chat/repositories/chat_repository.dart';
-import 'package:whatsapp_ui/models/chat_contact.dart';
-import 'package:whatsapp_ui/models/group.dart';
-import 'package:whatsapp_ui/models/message.dart';
+import 'package:vidchat/common/enums/message_enum.dart';
+import 'package:vidchat/common/providers/message_reply_provider.dart';
+import 'package:vidchat/features/auth/controller/auth_controller.dart';
+import 'package:vidchat/features/chat/repositories/chat_repository.dart';
+import 'package:vidchat/models/chat_contact.dart';
+import 'package:vidchat/models/group.dart';
+import 'package:vidchat/models/message.dart';
 
 final chatControllerProvider = Provider((ref) {
   final chatRepository = ref.watch(chatRepositoryProvider);

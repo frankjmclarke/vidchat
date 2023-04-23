@@ -1,16 +1,16 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:whatsapp_ui/common/widgets/error.dart';
-import 'package:whatsapp_ui/features/auth/screens/login_screen.dart';
-import 'package:whatsapp_ui/features/auth/screens/otp_screen.dart';
-import 'package:whatsapp_ui/features/auth/screens/user_information_screen.dart';
-import 'package:whatsapp_ui/features/group/screens/create_group_screen.dart';
-import 'package:whatsapp_ui/features/select_contacts/screens/select_contacts_screen.dart';
-import 'package:whatsapp_ui/features/chat/screens/mobile_chat_screen.dart';
-import 'package:whatsapp_ui/features/status/screens/confirm_status_screen.dart';
-import 'package:whatsapp_ui/features/status/screens/status_screen.dart';
-import 'package:whatsapp_ui/models/status_model.dart';
+import 'package:vidchat/common/widgets/error.dart';
+import 'package:vidchat/features/auth/screens/login_screen.dart';
+import 'package:vidchat/features/auth/screens/otp_screen.dart';
+import 'package:vidchat/features/auth/screens/user_information_screen.dart';
+import 'package:vidchat/features/group/screens/create_group_screen.dart';
+import 'package:vidchat/features/select_contacts/screens/select_contacts_screen.dart';
+import 'package:vidchat/features/chat/screens/mobile_chat_screen.dart';
+import 'package:vidchat/features/status/screens/confirm_status_screen.dart';
+import 'package:vidchat/features/status/screens/status_screen.dart';
+import 'package:vidchat/models/status_model.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {

@@ -2,10 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:whatsapp_ui/common/utils/colors.dart';
-import 'package:whatsapp_ui/common/utils/utils.dart';
-import 'package:whatsapp_ui/features/group/controller/group_controller.dart';
-import 'package:whatsapp_ui/features/group/widgets/select_contacts_group.dart';
+import 'package:vidchat/common/utils/colors.dart';
+import 'package:vidchat/common/utils/utils.dart';
+import 'package:vidchat/features/group/controller/group_controller.dart';
+import 'package:vidchat/features/group/widgets/select_contacts_group.dart';
 
 class CreateGroupScreen extends ConsumerStatefulWidget {
   static const String routeName = '/create-group';
