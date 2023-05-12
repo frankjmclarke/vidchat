@@ -42,6 +42,8 @@ class AuthRepository {
      Initiates phone number verification process using Firebase Authentication's
       verifyPhoneNumber() method. It sends a verification code to the provided
       phone number and navigates to the OTPScreen when the code is sent.
+       keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android
+
      */
     try {
       await auth.verifyPhoneNumber(

@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -49,21 +46,32 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyBzA14HRY4mLu5HsrIu-F2g0czyR9UXCTY',
+    appId: '1:274874166063:web:c4d375ec2947e3826dcfda',
+    messagingSenderId: '274874166063',
+    projectId: 'vidchat-444e8',
+    authDomain: 'vidchat-444e8.firebaseapp.com',
+    storageBucket: 'vidchat-444e8.appspot.com',
+    measurementId: 'G-FJML9X6J8G',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB37aSzQwR_RJatCxy9F7V5hcxSvy1pWqc',
-    appId: '1:867907366273:android:03f3e5c37621ae01cf0c80',
-    messagingSenderId: '867907366273',
-    projectId: 'whatsapp-backend-c4d7f',
-    storageBucket: 'whatsapp-backend-c4d7f.appspot.com',
+    apiKey: 'AIzaSyD-caJLYFGyTfYUw5JO50Z3kkA_hT_CDwk',
+    appId: '1:274874166063:android:d197b4b34d37c1616dcfda',
+    messagingSenderId: '274874166063',
+    projectId: 'vidchat-444e8',
+    storageBucket: 'vidchat-444e8.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBSDWRP0gJNvfu50pTKYfUqRDDEkQsQrUI',
-    appId: '1:867907366273:ios:6f8cdf10bb49ba7ecf0c80',
-    messagingSenderId: '867907366273',
-    projectId: 'whatsapp-backend-c4d7f',
-    storageBucket: 'whatsapp-backend-c4d7f.appspot.com',
-    iosClientId: '867907366273-j9hk7oisbdk70t3q3ri6n5qveuj30ohh.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAoW0R2rvO08MGWU6iNv63MdSI7FLRvWZ0',
+    appId: '1:274874166063:ios:5d0753e1f0f66c1a6dcfda',
+    messagingSenderId: '274874166063',
+    projectId: 'vidchat-444e8',
+    storageBucket: 'vidchat-444e8.appspot.com',
+    androidClientId: '274874166063-gk5n5lbphlfkgnj5gc6su0gbbehj45bp.apps.googleusercontent.com',
+    iosClientId: '274874166063-4vqre1nq871rmrp7o7no3q3ce35q2241.apps.googleusercontent.com',
     iosBundleId: 'com.example.whatsappUi',
   );
 }
