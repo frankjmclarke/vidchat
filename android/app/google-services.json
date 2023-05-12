@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "274874166063",
+    "project_id": "vidchat-444e8",
+    "storage_bucket": "vidchat-444e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274874166063:android:d197b4b34d37c1616dcfda",
+        "android_client_info": {
+          "package_name": "com.fclarke.vidchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "274874166063-gk5n5lbphlfkgnj5gc6su0gbbehj45bp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fclarke.vidchat",
+            "certificate_hash": "c579b6882012c285b1f33a67b7fb1c214d94e533"
+          }
+        },
+        {
+          "client_id": "274874166063-o1fvj2ksth850kohlnbrvgqh9bk9skd0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-caJLYFGyTfYUw5JO50Z3kkA_hT_CDwk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "274874166063-o1fvj2ksth850kohlnbrvgqh9bk9skd0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "274874166063-4vqre1nq871rmrp7o7no3q3ce35q2241.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.whatsappUi"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
